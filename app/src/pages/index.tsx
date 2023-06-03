@@ -1,12 +1,10 @@
 import Head from "next/head";
-// import Image from "next/image";
-import { Inter } from "next/font/google";
 import { Flex, chakra, Heading, Input } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
-
-import image from "../../public/assets/landingImage.jpg";
 import { useState } from "react";
 import { useRouter } from "next/router";
+
+import image from "../../public/assets/landingImage.jpg";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,7 +12,6 @@ export default function Home() {
   const router = useRouter();
 
   const onSubmit = (e: any) => {
-    console.log(typeof e);
     e.preventDefault();
     router.push(`/search/${searchQuery}`);
   };
