@@ -1,8 +1,8 @@
+import { Flex, Heading, Input, chakra } from "@chakra-ui/react";
 import Head from "next/head";
-import { Flex, chakra, Heading, Input } from "@chakra-ui/react";
-import { BsSearch } from "react-icons/bs";
-import { useState } from "react";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { BsSearch } from "react-icons/bs";
 
 import image from "../../public/assets/landingImage.jpg";
 
@@ -26,8 +26,8 @@ export default function Home() {
       </Head>
       <MainContainer>
         <ContentContainer>
-          <Heading color="whiteAlpha.800" size="2xl">
-            What Movie?
+          <Heading color="whiteAlpha.800" size="xl">
+            Find your movie
           </Heading>
           <form onSubmit={onSubmit}>
             <SearchbarContainer>
