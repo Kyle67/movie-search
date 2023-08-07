@@ -1,24 +1,27 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    // "extends": "standard-with-typescript",
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended"
+    ],
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "project": "./express/tsconfig.json"
+      "ecmaVersion": 2018,
+      "sourceType": "module"
     },
+    
     "rules": {
+    //   "prettier/prettier": ["error", { "singleQuote": true }],
+    //   "@typescript-eslint/explicit-function-return-type": "error",
+    //   "@typescript-eslint/no-explicit-any": 1,
+    //   "@typescript-eslint/no-inferrable-types": ["error", { "ignoreParameters": true }],
+    //   "@typescript-eslint/interface-name-prefix": ["error", { "prefixWithI": "always" }]
+    "@typescript-eslint/no-var-requires": 1,
+    "@typescript-eslint/no-unused-vars": 1,
+    "@typescript-eslint/ban-ts-comment": 0
     },
-    "plugins": ["@typescript-eslint"],
+    "env": {
+      "node": true
+    },
     "overrides": [
-        {
-            "files": ["*.ts", "*.tsx"],
-            "rules": {
-                "quotes": ["error", "double"],
-                "prefer-arrow-callback": "error"
-            } 
-        }
+        {"files": ["*.ts", "*.tsx"]}
     ]
-}
+  }
